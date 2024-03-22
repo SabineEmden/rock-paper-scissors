@@ -46,13 +46,24 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+function reportWinner(playerScore, computerScore) {
+  if (playerScore > computerScore) {
+    return "You won the game. Congratulations!";
+  } else if (playerScore < computerScore) {
+    return "You lost the game.";
+  } else {
+    return "The game ended in a  tie.";
+  }
+}
+
 function playGame() {
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("Choose Rock, Paper or Scissors:");
     let computerSelection = getComputerChoice();
-    alert(playRound(playerSelection, computerSelection));
-    alert(`The score is player ${playerScore} : computer ${computerScore}`);
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(`The score is player ${playerScore} : computer ${computerScore}`);
   }
+  console.log(reportWinner(playerScore, computerScore));
 }
 
 let playerScore = 0;

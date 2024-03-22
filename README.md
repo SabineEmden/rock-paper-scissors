@@ -4,6 +4,8 @@
 
 This project for JavaScript Basics in the Foundations Course by The Odin Project uses JavaScript only. The game is played in the browser console. A Graphical User Interface with buttons and text will be added at a later time.
 
+To play the game, go to the [live preview](https://github.com/SabineEmden/rock-paper-scissors/deployments/github-pages) on GitHub Pages, open the browser console, type `playGame()`, then press `ENTER`. 
+
 Skills used:
  - basic JavaScript
  - HTML boilerplate

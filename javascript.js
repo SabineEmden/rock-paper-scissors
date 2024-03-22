@@ -64,6 +64,8 @@ function playGame() {
     console.log(`The score is player ${playerScore} : computer ${computerScore}`);
   }
   console.log(reportWinner(playerScore, computerScore));
+  playerScore = 0;
+  computerScore = 0;
 }
 
 let playerScore = 0;

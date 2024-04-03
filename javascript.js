@@ -56,17 +56,17 @@ function reportWinner(playerScore, computerScore) {
   }
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("Choose Rock, Paper or Scissors:");
-    let computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`The score is player ${playerScore} : computer ${computerScore}`);
-  }
-  console.log(reportWinner(playerScore, computerScore));
-  playerScore = 0;
-  computerScore = 0;
-}
+// function playGame() {
+//   for (let i = 0; i < 5; i++) {
+//     let playerSelection = prompt("Choose Rock, Paper or Scissors:");
+//     let computerSelection = getComputerChoice();
+//     console.log(playRound(playerSelection, computerSelection));
+//     console.log(`The score is player ${playerScore} : computer ${computerScore}`);
+//   }
+//   console.log(reportWinner(playerScore, computerScore));
+//   playerScore = 0;
+//   computerScore = 0;
+// }
 
 let playerScore = 0;
 let computerScore = 0;

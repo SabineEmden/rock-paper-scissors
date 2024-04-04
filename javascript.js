@@ -61,6 +61,13 @@ function playRound(playerSelection, computerSelection) {
   } else {
     result.textContent = "Oops! Something went wrong. Try again.";
   }
+
+  if (playerScore >= 5 || computerScore >= 5) {
+    const winner = document.querySelector("#winner");
+    winner.textContent = reportWinner(playerScore, computerScore);
+    playerScore = 0;
+    computerScore = 0;
+  }
 }
 
 function reportWinner(playerScore, computerScore) {
@@ -73,24 +80,11 @@ function reportWinner(playerScore, computerScore) {
   }
 }
 
-// function playGame() {
-//   for (let i = 0; i < 5; i++) {
-//     let playerSelection = prompt("Choose Rock, Paper or Scissors:");
-//     let computerSelection = getComputerChoice();
-//     console.log(playRound(playerSelection, computerSelection));
-//     console.log(`The score is player ${playerScore} : computer ${computerScore}`);
-//   }
-//   console.log(reportWinner(playerScore, computerScore));
-//   playerScore = 0;
-//   computerScore = 0;
-// }
-
-
-
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(playRound(button.id, getComputerChoice()));
+    winner.textContent = "";
+    playRound(button.id, getComputerChoice());
   })
 });

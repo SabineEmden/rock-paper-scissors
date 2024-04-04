@@ -15,13 +15,12 @@ let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
-  const selection = document.createElement("p");
+  const selection = document.querySelector(".selection");
   selection.textContent =
     `Player selected ${playerSelection};
      Computer selected ${computerSelection}.`;
-  container.appendChild(selection);
 
-  const result = document.createElement("p");
+  const result = document.querySelector(".result");
 
   if (playerSelection === computerSelection) {
     result.textContent = `It's a tie!\n
@@ -62,8 +61,6 @@ function playRound(playerSelection, computerSelection) {
   } else {
     result.textContent = "Oops! Something went wrong. Try again.";
   }
-
-  container.appendChild(result);
 }
 
 function reportWinner(playerScore, computerScore) {

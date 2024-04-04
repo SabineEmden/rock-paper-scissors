@@ -9,8 +9,15 @@ function getComputerChoice() {
   }
 }
 
+const container = document.querySelector("#container");
+
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
+  selection = document.createElement("p");
+  selection.textContent =
+    `Player selected ${playerSelection};
+     Computer selected ${computerSelection}.`;
+  container.appendChild(selection);
 
   if (playerSelection === computerSelection) {
     return "It's a tie!";

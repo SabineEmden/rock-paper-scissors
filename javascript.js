@@ -10,6 +10,8 @@ function getComputerChoice() {
 }
 
 const container = document.querySelector("#container");
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
@@ -22,33 +24,40 @@ function playRound(playerSelection, computerSelection) {
   const result = document.createElement("p");
 
   if (playerSelection === computerSelection) {
-    result.textContent = "It's a tie!";
+    result.textContent = `It's a tie!\n
+    The score is Player ${playerScore} : Computer ${computerScore}`;
 
   } else if (playerSelection === "rock") {
     if (computerSelection === "paper") {
       computerScore++;
-      result.textContent = "You lose! Paper covers rock.";
+      result.textContent = `You lose! Paper covers rock.\n
+      The score is Player ${playerScore} : Computer ${computerScore}`;
     } else if (computerSelection === "scissors") {
       playerScore++;
-      result.textContent = "You win! Rock breaks scissors.";
+      result.textContent = `You win! Rock breaks scissors.\n
+      The score is Player ${playerScore} : Computer ${computerScore}`;
     }
   
   } else if (playerSelection === "paper") {
     if (computerSelection === "rock") {
       playerScore++;
-      result.textContent = "You win! Paper covers rock.";
+      result.textContent = `You win! Paper covers rock.\n
+      The score is Player ${playerScore} : Computer ${computerScore}`;
     } else if (computerSelection === "scissors") {
       computerScore++;
-      result.textContent = "You lose! Scissors cut paper.";
+      result.textContent = `You lose! Scissors cut paper.\n
+      The score is Player ${playerScore} : Computer ${computerScore}`;
     }
 
   } else if (playerSelection === "scissors") {
     if (computerSelection === "rock") {
       computerScore++;
-      result.textContent = "You lose! Rock breaks scissors.";
+      result.textContent = `You lose! Rock breaks scissors.\n
+      The score is Player ${playerScore} : Computer ${computerScore}`;
     } else if (computerSelection === "paper") {
       playerScore++;
-      result.textContent = "You win! Scissors cut paper.";
+      result.textContent = `You win! Scissors cut paper.\n
+      The score is Player ${playerScore} : Computer ${computerScore}`;
     }
   } else {
     result.textContent = "Oops! Something went wrong. Try again.";
@@ -79,8 +88,7 @@ function reportWinner(playerScore, computerScore) {
 //   computerScore = 0;
 // }
 
-let playerScore = 0;
-let computerScore = 0;
+
 
 const buttons = document.querySelectorAll("button");
 

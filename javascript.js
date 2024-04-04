@@ -61,13 +61,6 @@ function playRound(playerSelection, computerSelection) {
   } else {
     result.textContent = "Oops! Something went wrong. Try again.";
   }
-
-  if (playerScore >= 5 || computerScore >= 5) {
-    const winner = document.querySelector("#winner");
-    winner.textContent = reportWinner(playerScore, computerScore);
-    playerScore = 0;
-    computerScore = 0;
-  }
 }
 
 function reportWinner(playerScore, computerScore) {
@@ -84,7 +77,15 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
+    const winner = document.querySelector("#winner");
     winner.textContent = "";
+
     playRound(button.id, getComputerChoice());
+
+    if (playerScore >= 5 || computerScore >= 5) {
+      winner.textContent = reportWinner(playerScore, computerScore);
+      playerScore = 0;
+      computerScore = 0;
+    }
   })
 });

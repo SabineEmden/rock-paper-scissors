@@ -1,13 +1,23 @@
 # Project: Rock Paper Scissors
 
+## Version 0.2
+
+This update adds a user interface to the project. Styling with CSS was not part of the assignment.
+
+Assignment: [Revisiting Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
+
+Additional skills used:
+- JavaScript basics: DOM manipulation and events
+- version control with git: branching
+
 ## Version 0.1
 
 This project for JavaScript Basics in the Foundations Course by The Odin Project uses JavaScript only. The game is played in the browser console. A Graphical User Interface with buttons and text will be added at a later time.
 
-To play the game, go to the [live preview](https://github.com/SabineEmden/rock-paper-scissors/deployments/github-pages) on GitHub Pages, open the browser console, type `playGame()`, then press `ENTER`. 
+Assignment: [Project: Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
 
 Skills used:
- - basic JavaScript
+ - JavaScript basics: variables, operators, data types, conditionals, function basics, loops 
  - HTML boilerplate
  - version control with git
  - sharing code on GitHub

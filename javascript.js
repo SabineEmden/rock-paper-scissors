@@ -13,44 +13,48 @@ const container = document.querySelector("#container");
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
-  selection = document.createElement("p");
+  const selection = document.createElement("p");
   selection.textContent =
     `Player selected ${playerSelection};
      Computer selected ${computerSelection}.`;
   container.appendChild(selection);
 
+  const result = document.createElement("p");
+
   if (playerSelection === computerSelection) {
-    return "It's a tie!";
+    result.textContent = "It's a tie!";
 
   } else if (playerSelection === "rock") {
     if (computerSelection === "paper") {
       computerScore++;
-      return "You lose! Paper covers rock.";
+      result.textContent = "You lose! Paper covers rock.";
     } else if (computerSelection === "scissors") {
       playerScore++;
-      return "You win! Rock breaks scissors.";
+      result.textContent = "You win! Rock breaks scissors.";
     }
   
   } else if (playerSelection === "paper") {
     if (computerSelection === "rock") {
       playerScore++;
-      return "You win! Paper covers rock.";
+      result.textContent = "You win! Paper covers rock.";
     } else if (computerSelection === "scissors") {
       computerScore++;
-      return "You lose! Scissors cut paper.";
+      result.textContent = "You lose! Scissors cut paper.";
     }
 
   } else if (playerSelection === "scissors") {
     if (computerSelection === "rock") {
       computerScore++;
-      return "You lose! Rock breaks scissors.";
+      result.textContent = "You lose! Rock breaks scissors.";
     } else if (computerSelection === "paper") {
       playerScore++;
-      return "You win! Scissors cut paper.";
+      result.textContent = "You win! Scissors cut paper.";
     }
   } else {
-    return "Oops! Something went wrong. Try again.";
+    result.textContent = "Oops! Something went wrong. Try again.";
   }
+
+  container.appendChild(result);
 }
 
 function reportWinner(playerScore, computerScore) {
